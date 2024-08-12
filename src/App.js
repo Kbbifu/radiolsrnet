@@ -68,7 +68,7 @@ Furthermore he said since the coming of the project to the country in 2017, the 
       category: 'News',
       title:
         'Assessing the Feed Nigeria Summit 2020: Tackling food insecurity in Nigeria head-on.',
-      author: 'Happau MBANZILA',
+      author: 'JEREMIAH AMEDU',
       content: `When a man rises at dawn, what gives him an assurance of a bright day is not the shining rays of the sunlight or a pleasant weather, but the hope of getting three square meals with the right diet for his family and himself by sun set. According to the United Nations Food and Agriculture Organization, FAO, while many people may not be hungry in the sense that they are suffering physical discomfort caused by lack of dietary energy, they may still be food insecure.\nThey might also have access to food to meet their energy needs yet they are uncertain that it will last or they might be forced to reduce the quantity, and or the quality of food they eat in order to get by. This various aspect of food insecurity can contribute to various forms of malnutrition and can have serious consequences for health and wellbeing.\n THE FAO goes further by defining food insecurity as a situation where a person lacks regular access to enough safe and nutritious food for normal growth and development and an active and healthy life.\nThis may be due to unavailability of food or lack of resources to purchase or obtain food. Interestingly and somewhat ironically obesity and being overweight is also a indication of food insecurity. This is because uncertainty to access the right kind of food for long periods could lead to physiological changes that can contribute to obesity and overweight which in turn could also lead to severe illness.
 
 
@@ -93,86 +93,86 @@ However, despite these challenges which can be found in many countries throughou
   const [Shows, setShows] = useState([
     {
       id: '1',
-      title: 'Detente Musicale',
-      image: 'IMG-20240809-WA0167.jpg',
+      title: 'Agriculture',
+      image: 'sirinNoma.jpeg',
     },
     {
       id: '2',
-      title: 'A l école de la bible',
-      image: 'IMG-20240809-WA0169.jpg',
+      title: 'Textile',
+      image: 'dogarodakai.jpeg',
     },
     {
       id: '3',
-      title: 'Inetercession',
-      image: 'IMG-20240809-WA0171.jpg',
+      title: 'Commerce',
+      image: 'llimin.jpeg',
     },
     {
       id: '4',
-      title: 'Le Journal',
-      image: 'IMG-20240809-WA0168.jpg',
+      title: 'Zoom Eco',
+      image: 'kasuwarwuse.jpeg',
     },
 
     {
       id: '5',
-      title: 'Emission Spéciale Santé',
-      image: 'IMG-20240809-WA0171.jpg',
+      title: 'Prédication',
+      image: 'siyasa.jpeg',
     },
     {
       id: '6',
-      title: 'Jeunesse & Loisirs',
-      image: 'IMG-20240809-WA0167.jpg',
+      title: 'Muanda Propre',
+      image: 'tattalin.jpeg',
     },
     {
       id: '7',
-      title: 'Science & Santé',
-      image: 'IMG-20240809-WA0167.jpg',
+      title: 'Forex',
+      image: 'kacici.jpeg',
     },
   ]);
   const [Presenter, setPresenter] = useState([
     {
       id: '1',
-      name: 'Happau Mbanzila',
+      name: 'Happau MBANZILA',
       bio: '',
       image: 'IMG-20240809-WA0166.jpg',
     },
     {
       id: '2',
-      name: 'Happau Mbanzila',
+      name: 'Happau Mba',
       bio: '',
-      image: 'IMG-20240809-WA0171.jpg',
+      image: 'IMG-20240809-WA0167.jpg',
     },
   ]);
   const [Television, setTelevision] = useState([
     {
       id: '1',
-      title: 'Culte dominical',
+      title: 'Angas traditional dancers of Plateau state. #asharuwa',
       content: '',
-      url: 'https://www.youtube.com/channel/UCfX1-pHH0-hXjdcs1yLZDUA',
+      url: 'https://www.youtube.com/@HimmaTV261',
     },
-    {
-       id: '2',
-       title: 'State of the Nation',
-       content:
-         'When a man rises at dawn, what gives him an assurance of a bright day is not the shining rays of the sunlight or a pleasant weather, but the hope of getting three square meals with the right diet for his family and himself by sun set.',
-         image:tv2,
-         url:'https://www.youtube.com/@HimmaTV261'
-     },
-     {
-       id: '3',
-       title: 'Agriculture in the North',
-       content:
-         ' The agricultural sector being Nigeria’s major source of revenue has also witnessed evolution. Though it suffered setbacks as it was abandoned following the oil boom in the seventies, it has remained valuable to the Nigerian populace.',
-         image:tv3,
-         url:'https://www.youtube.com/@HimmaTV261'
-     },
-     {
-       id: '4',
-       title: 'Agriculture and Exports',
-       content:
-         'Every human endeavor is rapidly experiencing fascinating evolution making regular activities such as construction, education, healthcare, sports and agricultural activities more efficient and far reaching.',
-         image:tv4,
-         url:'https://www.youtube.com/@HimmaTV261'
-     },
+    // {
+    //   id: '2',
+    //   title: 'State of the Nation',
+    //   content:
+    //     'When a man rises at dawn, what gives him an assurance of a bright day is not the shining rays of the sunlight or a pleasant weather, but the hope of getting three square meals with the right diet for his family and himself by sun set.',
+    //     image:tv2,
+    //     url:'https://www.youtube.com/@HimmaTV261'
+    // },
+    // {
+    //   id: '3',
+    //   title: 'Agriculture in the North',
+    //   content:
+    //     ' The agricultural sector being Nigeria’s major source of revenue has also witnessed evolution. Though it suffered setbacks as it was abandoned following the oil boom in the seventies, it has remained valuable to the Nigerian populace.',
+    //     image:tv3,
+    //     url:'https://www.youtube.com/@HimmaTV261'
+    // },
+    // {
+    //   id: '4',
+    //   title: 'Agriculture and Exports',
+    //   content:
+    //     'Every human endeavor is rapidly experiencing fascinating evolution making regular activities such as construction, education, healthcare, sports and agricultural activities more efficient and far reaching.',
+    //     image:tv4,
+    //     url:'https://www.youtube.com/@HimmaTV261'
+    // },
   ]);
   // const [Navigation, setNavigation] = useState([
   //   {

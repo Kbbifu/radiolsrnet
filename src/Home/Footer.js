@@ -19,12 +19,12 @@ function Footer() {
           <h1 className='headersFont' >Living Stone Radio FM</h1>
           <div className='privacyMedia'>
             <div className='privacy'>
-              <li>Privacy Policy</li>
+              
               <Link to={'#'} className='myLink'>
-                <li>Terms</li>
+                <li>Privacy Policy Terms</li>
               </Link>
               <Link to={'/contact'} className='myLink'>
-                <li>Contact</li>
+                <li>Contacts</li>
               </Link>
             </div>
           </div>
@@ -119,7 +119,7 @@ function Footer() {
       </div>
 
       <div className='copyRight'>
-        <p>2024 &copy; All rights reserved.</p>
+        <p>2024 &copy; Living Stone Radio FM All rights reserved.</p>
         <p>Designed by Kongo Digital City.</p>
       </div>
     </div>

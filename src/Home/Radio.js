@@ -35,7 +35,7 @@ function Radio() {
                 On Air:
               </span>
               <span style={{ fontWeight: 'lighter', marginLeft: '10px' }}>
-                Sirin Noma
+                Détente Musicale
               </span>
             </h4>
           </div>
@@ -52,7 +52,7 @@ function Radio() {
                 Up Next:
               </span>
               <span style={{ fontWeight: 'lighter', marginLeft: '10px' }}>
-                Edition de Midi
+                Le Grand Journal
               </span>
             </h4>
           </div>

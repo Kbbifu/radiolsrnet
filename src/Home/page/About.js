@@ -6,16 +6,16 @@ export default function About() {
     color:'black',
   }
   const [data, setData] = useState('');
-  const handleClick = () =>{
-    window.open('https://www.sarmanfarms.com/services/', '_blank');
-  }
+  //const handleClick = () =>{
+  //  window.open('https://www.sarmanfarms.com/services/', '_blank');
+  //}
   const imgStyle = {
     width:'100%',
     height:'100%',
     objectFit:'cover',
   }
   useEffect(()=>{
-    setData(`HIMMA Radio and Television by Sarman Integrated Farms Limited is dedicated to further extension and propagation of agricultural practices within its locality.
+    setData(`Living Stone Radio FM and Television by Sarman Integrated Farms Limited is dedicated to further extension and propagation of agricultural practices within its locality.
 
 Whether you are a farmer, researcher, or simply passionate about agriculture, our human-touch radio service will keep you informed, inspired, and connected to the pulse of the agricultural community.
 
@@ -30,8 +30,8 @@ Whether you are a farmer, researcher, or simply passionate about agriculture, ou
         <p className='about-content'>
           <div className="govt">
             <div className="govtholder">
-            <div className="govtImg"><img src="/govt.jpeg" alt="" /></div>
-            <div className="govtChair"></div>
+              <div className="govtImg"><img src="/IMG-20240809-WA0168.jpg" alt="" /></div>
+              <div className="govtChair"><img src="/IMG-20240809-WA0167.jpg" alt="" /></div>
             </div>
           </div>
           <p style={{ fontSize: '16px', lineHeight: '1.5' }}>
@@ -75,11 +75,11 @@ Whether you are a farmer, researcher, or simply passionate about agriculture, ou
           >
             <a
               href='#'
-              onClick={handleClick}
+              //onClick={handleClick}
               style={{
                 border: 'none',
                 textDecoration: 'none',
-                color: 'black',
+                color: 'red',
                 fontSize: '14px',
               }}
             >
