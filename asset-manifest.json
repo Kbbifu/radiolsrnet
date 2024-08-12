@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/radiolsrnet/static/css/main.304077ac.css",
+    "main.js": "/radiolsrnet/static/js/main.88b55f8d.js",
+    "index.html": "/radiolsrnet/index.html",
+    "main.304077ac.css.map": "/radiolsrnet/static/css/main.304077ac.css.map",
+    "main.88b55f8d.js.map": "/radiolsrnet/static/js/main.88b55f8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.304077ac.css",
+    "static/js/main.88b55f8d.js"
+  ]
+}
