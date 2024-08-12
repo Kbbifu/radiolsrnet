@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/radiolsrnet/static/css/main.304077ac.css",
-    "main.js": "/radiolsrnet/static/js/main.39cbd7b7.js",
-    "index.html": "/radiolsrnet/index.html",
-    "main.304077ac.css.map": "/radiolsrnet/static/css/main.304077ac.css.map",
-    "main.39cbd7b7.js.map": "/radiolsrnet/static/js/main.39cbd7b7.js.map"
+    "main.css": "/static/css/main.304077ac.css",
+    "main.js": "/static/js/main.39cbd7b7.js",
+    "index.html": "/index.html",
+    "main.304077ac.css.map": "/static/css/main.304077ac.css.map",
+    "main.39cbd7b7.js.map": "/static/js/main.39cbd7b7.js.map"
   },
   "entrypoints": [
     "static/css/main.304077ac.css",
