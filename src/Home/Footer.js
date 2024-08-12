@@ -80,7 +80,7 @@ function Footer() {
         <div className='otherStation'>
           <h1 className='headersFont' >Addresses</h1>
           <li>
-            Plateau, Jos.
+            Muanda-Cité, Kongo Central - RDC.
           </li>
           {/* <li>+243 81 515 3780</li> */}
           {/* <li>+243 81 515 3780</li> */}
