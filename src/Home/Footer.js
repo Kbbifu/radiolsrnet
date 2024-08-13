@@ -16,7 +16,7 @@ function Footer() {
 
       <div className='footerContainer'>
         <div className='footLogo'>
-          <h1 className='headersFont' >Living Stone Radio FM</h1>
+          <h1 className='headersFont'>Living Stone Radio FM</h1>
           <div className='privacyMedia'>
             <div className='privacy'>
               
