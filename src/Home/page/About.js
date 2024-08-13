@@ -1,5 +1,6 @@
 import React, {useState,  useEffect} from 'react'
 import Nav from '../Nav'
+import HomeBanner from '../HomeBanner'
 export default function About() {
   const bg ={
     background:'white',
@@ -15,16 +16,13 @@ export default function About() {
     objectFit:'cover',
   }
   useEffect(()=>{
-    setData(`Living Stone Radio FM and Television by Sarman Integrated Farms Limited is dedicated to further extension and propagation of agricultural practices within its locality.
-
-Whether you are a farmer, researcher, or simply passionate about agriculture, our human-touch radio service will keep you informed, inspired, and connected to the pulse of the agricultural community.
-
-
- `);
+    setData(`Living Stone Radio FM and Television by Kongo Digital City is dedicated to further extension and propagation of gospel practices within its locality.`);
   },[])
   return (
     <div>
       <Nav />
+      <HomeBanner />
+
       <div className='about-container' style={bg}>
         <h1 className='headersFont'>Qui sommes-nous?</h1>
         <p className='about-content'>
@@ -35,7 +33,7 @@ Whether you are a farmer, researcher, or simply passionate about agriculture, ou
             </div>
           </div>
           <p style={{ fontSize: '16px', lineHeight: '1.5' }}>
-          Living Stone Radio est une plateforme de diffusion diversifiée avec des participations dans la radio, la télévision, entre autres.
+          Living Stone Radio "LSR FM" est une idée des quelques paroissiensn  de la Paroisse Francophone Missionnaire "PFM / Muanda", qui ont reflechi sur la croissance spirituelle et numérique de cette Paroisse qui se compte parmi tant d'autres de la 18ème Communauté Evangelique de l'Alliance au Congo, CEAC en sigle.
 
             . <br />
             <br />
@@ -43,25 +41,25 @@ Whether you are a farmer, researcher, or simply passionate about agriculture, ou
 
             live channels: <br />
             <br />
-            <li>Informations</li>
-            <li>Actualités</li>
-            <li>Jeunesses & Sports</li>
-            <li>Divertissements</li>
-            <li>Agriculture & Commerce</li> <br />
+            <li>Une Chaine de Télévion professionnelle</li>
+            <li>Live Streaming</li>
+            <li>Diffusion sur les médias sociaux</li>
             <br />
+            
+            <h1 className='headersFont'>Notre Mission</h1>
+            La LSR FM a comme mission principale, l'évangélisation par la radio et l'obtention d'une société équilibrée, équitable et pacifiée. <br />
             <h1 className='headersFont'>Notre Vision</h1>
             Notre vision est de servir notre communauté avec les informations les plus crédibles et les plus fiables pour la croissance et le développement. <br />
-            <h1 className='headersFont'>Notre Mission</h1>
-            Notre mission est d’utiliser la radiodiffusion comme un outil d’unité, de paix, de croissance et de développement. <br />
-            <h1 className='headersFont'>Nos valeurs fondamentales</h1>
+            <h1 className='headersFont'>Nos Objectifs</h1>
             <ul>
-              <li>Respect et valorisation des savoirs et innovations locales</li>
-              <li>Valeur pour l'environnement et les écosystèmes</li>
-              <li>Professionnel, efficace et informé par des données scientifiques pertinentes</li>
-              <li>Créatif, flexible et innovant</li>
-              <li>Sensible au genre</li>
-              <li>Qualité, égalité et éthique</li>
-              <li>Passion. </li>
+              <li>Contribuer à l'accru des chrétiens convertis et Baptisés</li>
+              <li>Contribuer au développement économique dans son bassin d'écoute</li>
+              <li>Contribuer à améliorer les revenus de son bassin d'écoute </li>
+              <li>Booster l'entrepreneuriat dans les milieux des jeunes</li>
+              <li>Contribuer à la promotion et la défense des droits et liberté</li>
+              <li>Promouvoir la coexistence pacifique dans la société</li>
+              <li>Promotion de l'éducation et de la citoyenneté </li>
+              <li>Contribuer à la promotion de la communauté et du bien etre social </li>
             </ul>
           </p>
         </p>

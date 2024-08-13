@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { DataContext } from '../../App';
 import { BsDot } from 'react-icons/bs';
 import Nav from '../Nav';
+import HomeBanner from '../HomeBanner';
 function PresenterDetails() {
     const { id } = useParams();
     const [info, setInfo] = useState({});
@@ -23,6 +24,7 @@ function PresenterDetails() {
   return (
     <div>
       <Nav/>
+      <HomeBanner />
       <div className='detailsHeader'>
         {data.map((item) => {
           if (item.id == id) {

@@ -80,7 +80,7 @@ function Footer() {
         <div className='otherStation'>
           <h1 className='headersFont' >Addresses</h1>
           <li>
-            Muanda-Cité, Kongo Central - RDC.
+            575, Avenue du commerce, Quartier Océan, Muanda-ville, Kongo Central - RDC.
           </li>
           {/* <li>+243 81 515 3780</li> */}
           {/* <li>+243 81 515 3780</li> */}
@@ -96,7 +96,7 @@ function Footer() {
               <TfiTwitter className='nav-media-icons' size={'25px'} />
             </li>
             <li>
-              <FaFacebookF className='nav-media-icons' size={'25px'} />
+              <a href='https://web.facebook.com/livingstoneradio.rdc' target='_blank'><FaFacebookF className='nav-media-icons' size={'25px'} color='white' /></a>
             </li>
             <li>
               <FaWhatsapp className='nav-media-icons' size={'25px'} />
