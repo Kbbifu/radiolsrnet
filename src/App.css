@@ -147,14 +147,14 @@ align-items: center;
   left: 4px;
 }
 .watchBanner{
-  background-color: var(--bg-color);
+  background-color: rgb(58, 9, 155);
   color: rgb(98, 145, 215);
   padding: 8px 143px;
   font-weight: bold;
   border-bottom: 1px solid darkgray;
 }
 .watch{
-  background-color: var(--bg-color);
+  background-color: rgb(58, 9, 155);
 }
 
 .App {
@@ -1011,7 +1011,7 @@ align-items: center;
 .mobileHider{
   /* height: 70px; */
   width: 100%;
-  background-color: var(--yellow-bg-color);
+  background-color: rgb(58, 9, 155);
   position: absolute;
   top: 110px;
   left: 0;
@@ -1472,7 +1472,7 @@ align-items: center;
 }
 
 .copyRight{
-  background-color: var(--yellow-bg-color);
+  background-color: #741010;
   padding: 2px 28px;
   display: flex;
   justify-content: space-between;
