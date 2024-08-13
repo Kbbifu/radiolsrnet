@@ -912,11 +912,12 @@ align-items: center;
   .nav_men li{
     list-style: none;
     padding: 10px 80px;
+    color: white;
 
   }
   .nav_men li a{
     text-decoration: none;
-    color: black;
+    color: white;
   }
   /* Nav active class  */
   .nav_active{
@@ -1177,7 +1178,7 @@ align-items: center;
 
 /* tv  */
 .presenterContainer{
-  background-color: var(--yellow-bg-color);
+  background-color: white;
   display: block;
   padding: 5px 20px 10px;
 
@@ -1452,7 +1453,7 @@ align-items: center;
 
 .footerContainer{
   padding: 20px;
-  background-color: var(--yellow-bg-color);
+  background-color: rgb(58, 9, 155);
   color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
