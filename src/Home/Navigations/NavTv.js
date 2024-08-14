@@ -63,7 +63,7 @@ function NavTv() {
               onClick={handleClick}
             >
               <span>
-                <h1 style={{ color: 'white', fontWeight: 'bold' }}>Regarder</h1>
+                <h1 style={{ color: 'black', fontWeight: 'bold' }}>Regarder</h1>
               </span>
               <span className='liveHolder'>
                 <span className='livetv'>

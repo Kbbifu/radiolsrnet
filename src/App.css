@@ -179,7 +179,9 @@ align-items: center;
   background-color: rgb(58, 9, 155);
   width: 200px;
   border-bottom: 1px solid gray;
+  
 }
+
 .nav_brand{
   text-transform: uppercase;
   font-weight: bold;
@@ -464,7 +466,7 @@ align-items: center;
   padding: 20px 143px;
   border-bottom: 1px solid darkgray;
   /* background-color: var(--yellow-bg-color); */
-  background-color: white;
+  background-color: rgb(58, 9, 155);
   color: black;
 }
 .tvHeader{
@@ -839,7 +841,7 @@ align-items: center;
   align-items: center;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: var(--bg-color);
+  background-color: rgb(58, 9, 155);
 }
 .homeBannerSection2{
   display: none;
@@ -1301,6 +1303,7 @@ align-items: center;
   justify-content: space-between;
   padding: 5px 20px 10px;
   border-bottom: 1px solid darkgray;
+  background-color: rgb(58, 9, 155);
 }
 .televisionLogo{
   text-align: center;

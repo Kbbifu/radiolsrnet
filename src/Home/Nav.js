@@ -57,7 +57,7 @@ useEffect( () => {
   }
 
   return (
-    <div>
+    <div className='navi'>
       {/* main navigation */}
 
       <nav className='nav' style={navContainer}>
