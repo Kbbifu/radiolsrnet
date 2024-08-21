@@ -83,7 +83,7 @@ useEffect( () => {
           </li>
           <li className='nav_item'>
             <Link className='nav_link' to={'/waserock-tv'}>
-              TV
+              Prédications
             </Link>
           </li>
           <li className='nav_item'>
@@ -103,7 +103,7 @@ useEffect( () => {
           </li>
           <li className='nav_item'>
             <Link className='nav_link' to={'/podcast'}>
-              Podcast
+              Méditons ensemble
             </Link>
           </li>
           <li className='nav_item'>

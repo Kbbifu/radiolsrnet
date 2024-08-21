@@ -1,57 +1,51 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { DataContext } from '../../App';
-import { BsDot } from 'react-icons/bs';
+import React, { useState, useEffect } from 'react';
+import { useParams, link } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore'; // Import Firestore functions
+import { db } from '../../firebase-config'; // Import Firebase config
 import Nav from '../Nav';
-import HomeBanner from '../HomeBanner';
-function PresenterDetails() {
-    const { id } = useParams();
-    const [info, setInfo] = useState({});
-    const [book, setBook] = useState([]);
-    const url = `http://localhost:5003/posts/${id}/`;
-    const category = useContext(DataContext);
-    const [section, setSection] = useState([]);
+import Footer from '../Footer';
 
-    let data = category.Presenter;
-    const imageStyle = {
-      width: '100%',
-      height: '100%',
-      borderRadius: '10px',
+function PresenterDetails() {
+  const { id } = useParams();
+  const [presenter, setPresenter] = useState(null);
+
+  // Fetch a specific presenter by ID
+  useEffect(() => {
+    const fetchPresenter = async () => {
+      try {
+        const docRef = doc(db, 'presenters', id);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setPresenter({ id: docSnap.id, ...docSnap.data() });
+        } else {
+          console.log('No such presenter!');
+        }
+      } catch (error) {
+        console.error('Error fetching presenter:', error);
+      }
     };
-    const authorStyle = {
-      textAlign: 'left',
-    };
+
+    fetchPresenter();
+  }, [id]);
+
+  if (!presenter) return <p>Loading...</p>;
+
   return (
     <div>
-      <Nav/>
-      <HomeBanner />
+      <Nav />
       <div className='detailsHeader'>
-        {data.map((item) => {
-          if (item.id == id) {
-            return (
-              <div key={item.id}>
-                
-                <div className='dtailsBanner'>
-                  {/* <img src={item.image} alt='' style={imageStyle} /> */}
-                </div>
-                <p className=' banner-content author'>
-                  {item.name} <span>{item.date}</span>
-                </p>
-                <p className='banner-content'>{item.bio}</p>
-              </div>
-            );
-          }
-        })}
-        <h1 className='detailsHeader'>
-          {/* Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id. */}
-          {info.title}
-        </h1>
-        <p className='banner-content'>{info.content}</p>
+        <div className='dtailsBanner'>
+          <img src={presenter.photo} alt={presenter.name} style={{ width: '100%', height: '100%', borderRadius: '10px' }} />
+        </div>
+        <p className='banner-content author'>
+          {presenter.name} <span>{presenter.date}</span>
+        </p>
+        <p className='banner-content'>{presenter.biography}</p>
         <Link to={-1}>
           <button className='btn'>Retour</button>
         </Link>
       </div>
-      ;
+      <Footer />
     </div>
   );
 }

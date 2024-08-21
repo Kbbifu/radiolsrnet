@@ -1,5 +1,5 @@
-import React, { useContext,useState } from 'react';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Footer from './Home/Footer';
@@ -10,16 +10,6 @@ import NavNews from './Home/Navigations/NavNews';
 import NavPresenters from './Home/Navigations/NavPresenters';
 import NavTv from './Home/Navigations/NavTv';
 import NavShows from './Home/Navigations/NavShows';
-// import tv1 from './Home/images/tv1.jpeg';
-// import show1 from './images/cinikin_amfanin_noma.jpeg'
-// import show2 from './images/Sirin-Noma.jpeg';
-// import show3 from './images/awaki.jpeg';
-// import show4 from './images/dabbobin_ruwa.jpeg'
-// import show5 from './images/Hatsi.jpeg';
-// import show6 from './images/kiwo_don_riba.jpeg'
-// import show7 from './images/noma_don_riba.jpeg'
-// import show8 from './images/masara.jpeg'
-// import show9 from '../images/naurorinnoma.jpeg'
 import NewsDetails from './Home/details/NewsDetails';
 import PresenterDetails from './Home/details/PresenterDetails';
 import ShowsDetails from './Home/details/ShowsDetails';
@@ -27,8 +17,20 @@ import TvDetails from './Home/details/TvDetails';
 import Podcast from './Home/page/Podcast';
 import NoteFound from './Home/NoteFound';
 import Radio from './Home/Radio';
-import AdHome from './Admin/AdHome';
-
+import AdminSidebar from './Admin/AdminSidebar';
+import Dashboard from './Admin/Dashboard';
+import ManageShows from './Admin/ManageShows';
+import ManageNews from './Admin/ManageNews'
+import ManagePlaylists from './Admin/ManagePlaylists';
+import Settings from './Admin/settings';
+import SignUp from './Auth/Signup';
+import Login from './Auth/Login';
+import AdminHome from './Admin/AdminHome';
+import Logout from './Auth/Logout';
+import PrivateRoute from './Auth/PrivateRoute';
+import ManageSchedule from './Admin/ManageSchedule';
+import ManageUsers from './Admin/ManageUsers';
+import ManagePresenters from './Admin/ManagePresenters';
 
 export const DataContext = React.createContext();
 
@@ -199,10 +201,9 @@ However, despite these challenges which can be found in many countries throughou
   return (
     <div className='App'>
       <BrowserRouter>
-        <DataContext.Provider
-          value={{ News, Shows, Presenter, Television }}
-        >
+        <DataContext.Provider value={{ News, Shows, Presenter, Television }}>
           <Routes>
+            {/* Public Routes */}
             <Route path='/' element={<Home />} />
             <Route path='/page/:id/' element={<Page />} />
             {/* details section  */}
@@ -223,12 +224,39 @@ However, despite these challenges which can be found in many countries throughou
             <Route path='/programmes' element={<NavShows />} />
             <Route path='/podcast' element={<Podcast />} />
             <Route path='*' element={<NoteFound />} />
-            <Route path='/admin' element={<AdHome/>} />
+            
+            
+            {/* Authentication Routes */}
+            <Route path='/signup' element={<SignUp />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/administration' element={<AdminHome />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/manageshows' element={<ManageShows />} />
+            <Route path='/manageplaylists' element={<ManagePlaylists />} />
+            <Route path='/managenews' element={<ManageNews />} />
+            <Route path='/manageschedule' element={<ManageSchedule />} />
+            <Route path='/managepresenters' element={<ManagePresenters />} />
+            <Route path='/manageusers' element={<ManageUsers />} />
+            
+            {/* Admin Routes */}
+            <Route path='/admin' element={<PrivateRoute><AdminLayout /></PrivateRoute>} />
           </Routes>
         </DataContext.Provider>
-        <Footer />
       </BrowserRouter>
-      <div className='home-container'></div>
+    </div>
+  );
+}
+
+function AdminLayout() {
+  return (
+    <div>
+      <AdminSidebar />
+      <Routes>
+        <Route path='dashboard' element={<Dashboard />} />
+        <Route path='manageshows' element={<ManageShows />} />
+        <Route path='manageplaylists' element={<ManagePlaylists />} />
+        <Route path='settings' element={<Settings />} />
+      </Routes>
     </div>
   );
 }

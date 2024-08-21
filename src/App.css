@@ -17,11 +17,11 @@
   --yellow-bg-color: #2C2E3E;
 } */
 :root{
-  --bg-color: #abcefada;
-  --second-bg-color: #d2e2f5da;
+  --bg-color: #f3f5f7da;
+  --second-bg-color: #ebedf0da;
   --text-color: #741010;
-  --third-bg-color: #d2e2f5da;
-  --yellow-bg-color: #d2e2f5da;
+  --third-bg-color: #f8f9fada;
+  --yellow-bg-color: #f3f4f5da;
 }
 .govtholder{
   display: block;
@@ -419,9 +419,9 @@ align-items: center;
 }
 .gencontainer{
   padding: 20px 145px;
-  border-bottom: 1px solid darkgray;
+  border-bottom: 0px solid darkgray;
   color:black;
-  background-color: whitesmoke;
+  background-color: white;
 }
 .gridcontainer,.showsSlider,.photogallary{
   /* width: 80%; */
@@ -523,7 +523,7 @@ align-items: center;
 
 .showsContainer{
   padding: 20px 143px;
-  border-bottom: 1px solid darkgray;
+  border-bottom: 0px solid darkgray;
   background-color: white;
 }
 .showsContainer-mobile{
@@ -571,8 +571,8 @@ align-items: center;
 
 .presenterContainer{
   padding: 20px 143px;
-  border-bottom: 1px solid darkgray;
-  background-color: var(--yellow-bg-color);
+  border-bottom: 0px solid darkgray;
+  background-color: white;
   color: black;
 }
 .presenterProfiles{

@@ -24,4 +24,4 @@ function Podcast() {
   );
 }
 
-export default Podcast
+export default Podcast 

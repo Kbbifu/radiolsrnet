@@ -93,7 +93,7 @@ function Footer() {
               <FaInstagram className='nav-media-icons' size={'25px'} />
             </li>
             <li>
-              <a href='https://x.com/RadioLsrFM' target='_blank'><TfiTwitter className='nav-media-icons' size={'25px'} color='white' /></a>
+              <TfiTwitter className='nav-media-icons' size={'25px'} />
             </li>
             <li>
               <a href='https://web.facebook.com/livingstoneradio.rdc' target='_blank'><FaFacebookF className='nav-media-icons' size={'25px'} color='white' /></a>

@@ -1,51 +1,50 @@
-import React, {useState, useContext, useEffect} from 'react'
-import { DataContext } from '../App';
-import { Link } from 'react-router-dom';
-import HomeBanner from './HomeBanner';
+import React, { useState, useEffect } from 'react';
+import { collection, getDocs } from 'firebase/firestore'; // Import Firestore functions
+import { db } from '../firebase-config'; // Import Firebase config
 
 function Presenters() {
+  const [presenters, setPresenters] = useState([]);
 
+  // Fetch presenters from Firestore
+  useEffect(() => {
+    const fetchPresenters = async () => {
+      try {
+        const presentersCollection = collection(db, 'presenters'); // Access the 'presenters' collection
+        const presentersSnapshot = await getDocs(presentersCollection); // Fetch all documents
+        const presentersList = presentersSnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data(),
+        })); // Map through the documents to extract data
+        setPresenters(presentersList); // Update state with fetched presenters
+      } catch (error) {
+        console.error('Error fetching presenters:', error);
+      }
+    };
 
-  const containerStyles = {
-    width: '500px',
-    height: '280px',
-    margin: '0, auto',
-    backgroundColor:'whitesmoke',
-  }
-  const category = useContext(DataContext);
-  const [presenter, setPresenter] = useState([]);
+    fetchPresenters(); // Call the function to fetch data
+  }, []);
 
-  useEffect((()=>{
-    setPresenter(category.Presenter)
-  }),[])
-      const imageStyle = {
-        width: '100%',
-        height: '100%',
-        borderRadius: '50%',
-        objectFit: 'cover',
-      };
-      const imageStylemobile = {
-        width: '200px',
-        height: '200px',
-        borderRadius: '50%',
-        objectFit: 'cover',
-      };
+  const imageStylemobile = {
+    width: '200px',
+    height: '200px',
+    borderRadius: '50%',
+    objectFit: 'cover',
+  };
 
   return (
     <div>
-      {/* presenters section  */}
-      
       <div className='presenterContainer'>
         <div className='presenterHeader mb-header'>
           <h1 className='headersFont'>Nos Animateurs</h1>
         </div>
         <div className='presenterProfileHolder'>
           <div className='presenterProfiles'>
-            {presenter.map((item) => {
+            {presenters.map((item) => {
+              
               return (
                 <div className='presenterCard' key={item.id}>
                   <div className='sliderCardImg'>
-                    <img src={item.image} style={imageStylemobile} alt='' />
+                    <img src={item.photo} style={imageStylemobile} alt={item.name} />
                   </div>
                   <li className=''>
                     <h3>{item.name}</h3>
@@ -55,12 +54,9 @@ function Presenters() {
             })}
           </div>
         </div>
-        {/* <div style={containerStyles}>
-            <Slider slides={slides} />
-          </div> */}
       </div>
     </div>
   );
 }
 
-export default Presenters
+export default Presenters;
